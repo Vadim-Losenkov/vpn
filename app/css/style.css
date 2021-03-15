@@ -45,8 +45,7 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -83,8 +82,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -190,9 +188,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -200,9 +198,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -211,9 +209,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -231,8 +229,7 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -264,10 +261,9 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type="checkbox"],
-[type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -276,8 +272,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -285,7 +281,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -295,7 +291,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -342,22 +338,34 @@ template {
   display: none;
 }
 
+.product__item-plus::before, .plus__list-item::before {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::after,
 *::before {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 a {
   display: inline-block;
   text-decoration: none;
   color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
 
 ul, li {
@@ -370,14 +378,17 @@ button {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  padding: 0;
+  outline: none;
 }
 
 body {
-  font-family: 'Rubik', Arial, Helvetica, sans-serif;
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 30px;
   color: #4F5665;
+  min-width: 1920px;
 }
 
 .container {
@@ -392,30 +403,237 @@ body {
   padding: 0 30px;
 }
 
+.title {
+  margin-bottom: 50px;
+}
+.title__main {
+  font-size: 35px;
+  line-height: 50px;
+  color: #0b132a;
+  font-weight: 500;
+  text-align: center;
+}
+.title__subtitle {
+  font-size: 16px;
+  line-height: 30px;
+  color: #4f5665;
+  font-weight: 400;
+  text-align: center;
+}
+
 .header {
   padding-top: 45px;
   margin-bottom: 90px;
 }
-
 .header__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__list {
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+}
+.header__login {
+  display: flex;
+  align-items: center;
+}
+.header__login-signin {
+  margin-right: 30px;
+  font-weight: 700;
+}
+.header__login-signup {
+  width: 150px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 35px;
+  border: 2px solid #f53854;
+  background-color: transparent;
+  font-weight: 700;
+  color: #f53854;
 }
 
-.header__list {
-  width: 370px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.top {
+  margin-bottom: 90px;
 }
+.top__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.top__content {
+  max-width: 540px;
+}
+.top__content-title {
+  font-size: 46px;
+  line-height: 70px;
+  color: #0b132a;
+  font-weight: 500;
+}
+.top__content-title span {
+  font-weight: 700;
+}
+.top__content-text {
+  margin-bottom: 50px;
+}
+.top__content-btn {
+  padding: 20px 75px;
+  background-color: #f53854;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 2px 2px 50px rgba(245, 56, 84, 0.24);
+  border-radius: 7px;
+}
+.top__banner {
+  margin-top: 90px;
+  width: 100%;
+  padding: 35px 90px;
+  border-radius: 7px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.04);
+}
+.top__banner-col {
+  display: flex;
+  align-items: center;
+}
+.top__banner-col + .top__banner-col {
+  padding-left: 110px;
+  border-left: 2px solid #eeeff2;
+}
+.top__banner-img {
+  margin-right: 35px;
+}
+
+.plus {
+  padding-bottom: 90px;
+  margin-bottom: 90px;
+}
+.plus__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.plus__content {
+  max-width: 405px;
+}
+.plus__title {
+  font-size: 35px;
+  line-height: 50px;
+  color: #0b132a;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.plus__text {
+  margin-bottom: 20px;
+}
+.plus__list-item {
+  font-size: 14px;
+  padding-left: 32px;
+  position: relative;
+}
+.plus__list-item::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  background-image: url("../images/loc.svg");
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.product__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.product__item {
+  padding: 50px 70px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s;
+}
+.product__item:hover {
+  border: 2px solid #f53854;
+}
+.product__item:hover .product__item-btn {
+  transition: all 0.3s;
+  background-color: #f53854;
+  color: #fff;
+  box-shadow: 2px 2px 50px rgba(245, 56, 84, 0.24);
+}
+.product__item-title {
+  font-size: 18px;
+  line-height: 30px;
+  color: #0b132a;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.product__item-list {
+  margin-bottom: 45px;
+}
+.product__item-price {
+  font-size: 25px;
+  line-height: 30px;
+  color: #0b132a;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.product__item-plus {
+  margin-top: 25px;
+  padding-left: 40px;
+  position: relative;
+}
+.product__item-plus::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+  background-image: url("../images/loc.svg");
+}
+.product__item-btn {
+  padding: 10px 0;
+  border: 3px solid #f53854;
+  border-radius: 30px;
+  margin: 0 auto;
+  font-weight: 700;
+  color: #f53854;
+  width: 100%;
+}
+
+.reviews {
+  color: #0b132a;
+}
+.reviews__item {
+  width: 400px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 30px;
+}
+.reviews__user {
+  display: flex;
+  padding-bottom: 15px;
+}
+.reviews__user-name {
+  font-weight: 500;
+  font-size: 18px;
+}
+.reviews__user-location {
+  font-size: 14px;
+  color: #4f5665;
+}
+
 /*# sourceMappingURL=style.css.map */
