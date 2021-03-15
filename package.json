@@ -7,7 +7,10 @@
     "test": "npm run scss-compile",
     "scss-compile": "sass app/scss/style.scss app/css/style.min.css",
     "watch": "npm run scss-compile"
- },
+  },
   "author": "Vadim Losenkov",
   "license": "ISC",
+  "dependencies": {
+    "swiper": "^6.5.0"
+  }
 }

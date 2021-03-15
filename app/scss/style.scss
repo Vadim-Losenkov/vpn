@@ -97,6 +97,9 @@
   &__banner-img {
     margin-right: 35px;
   }
+  &__banner-title {
+    color: $text-blue;
+  }
 }
 
 .plus {
@@ -121,9 +124,6 @@
   &__text {
     margin-bottom: 20px;
   }
-  &__list {
-    
-  }
   &__list-item {
     font-size: 14px;
     padding-left: 32px;
@@ -144,6 +144,7 @@
 }
 
 .product {
+  background-color: #fafafa;
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -152,7 +153,7 @@
     padding: 50px 70px;
     background-color: #fff;
     border-radius: 10px;
-    border: 1px solid  #ccc;
+    border: 2px solid  #ccc;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -185,6 +186,9 @@
     font-weight: 500;
     text-align: center;
     margin-bottom: 20px;
+    span {
+      color: #4F5665;
+    }
   }
   &__item-plus {
     margin-top: 25px;
@@ -198,9 +202,14 @@
       width: 20px;
       height: 20px;
       transform: translateY(-50%);
-      background-image: url('../images/loc.svg');
+      background-image: url('../images/checked.svg');
       @extend %image;
     }
+  }
+  &__item-img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
   }
   &__item-btn {
     padding: 10px 0;
@@ -213,17 +222,49 @@
   }
 }
 
+.location {
+  background-color: #fafafa;
+  margin-bottom: 50px;
+  &__img {
+    margin-bottom: 35px;
+    img {
+      width: 100%;
+    }
+  }
+  &__users {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .reviews {
   color: #0b132a;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
   &__item {
     width: 400px;
     border-radius: 10px;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     padding: 30px;
+    transition: all .3s;
+    &:hover {
+      border: 2px solid $red;
+    }
+  }
+  &__item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+  }
+  &__item-rate {
+    font-weight: 500;
   }
   &__user {
-    display: flex;
-    padding-bottom: 15px;
+    display: flex; 
     &-name {
       font-weight: 500;
       font-size: 18px;
@@ -231,9 +272,12 @@
     &-location {
       font-size: 14px;
       color: #4f5665;
+      display: block;
     }
-  }
-  &__item {
-    
+    &-img {
+      width: 50px;
+      height: 50px;
+      margin-right: 20px;
+    }
   }
 }
