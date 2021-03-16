@@ -241,8 +241,12 @@
 .reviews {
   color: #0b132a;
   &__inner {
+    overflow-x: scroll;
+  }
+  &__wrapper {
     display: flex;
-    justify-content: space-between;
+    padding-bottom: 110px;
+    margin-bottom: 65px;
   }
   &__item {
     width: 400px;
@@ -250,6 +254,7 @@
     border: 2px solid #ccc;
     padding: 30px;
     transition: all .3s;
+    margin-right: 50px;
     &:hover {
       border: 2px solid $red;
     }
@@ -262,6 +267,7 @@
   }
   &__item-rate {
     font-weight: 500;
+    display: flex;
   }
   &__user {
     display: flex; 
@@ -279,5 +285,114 @@
       height: 50px;
       margin-right: 20px;
     }
+  }
+  
+  &__banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid  #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 50px rgba(#000, .04);
+    padding: 50px 70px;
+    margin-top: 500px;
+    margin-bottom: -120px;
+    
+    &-content {
+      max-width: 370px;
+    }
+    
+    &-title {
+      font-size: 32px;
+      line-height: 45px;
+      color: #0b132a;
+      font-weight: 500;
+    }
+    &-text {
+      
+    }
+    &-btn {
+      box-shadow: 2px 2px 50px rgba($red, .24);
+      background-color: $red;
+      border-radius: 10px;
+      color: #fff;
+      font-weight: 700;
+      padding: 20px 65px;
+    }
+  }
+  
+  .slick-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    li + li {
+      margin-left: 15px;
+    }
+    button {
+      width: 15px;
+      height: 15px;
+      font-size: 0;
+      background-color: #ccc;
+      border-radius: 50%;
+      transition: all .3s;
+    }
+    li.slick-active button{
+      width: 45px;
+      background-color: $red;
+      border-radius: 10px;
+    }
+  }
+  
+  .arrow {
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid $red;
+    position: absolute;
+    bottom: 0;
+    right: 60px;
+    transition: all .3s;
+    &:before {
+      content: "";
+      position: absolute;
+      background-image: url('../images/arrow-right.svg');
+      width: 30px;
+      height: 30px;
+      @extend %image;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &:hover {
+      background-color: $red;
+      &:before {
+        background-image: url('../images/arrow-right-white.svg');
+      }
+    }
+  }
+  .arrow-prev {
+    right: 140px;
+    &:before {
+      background-image: url('../images/arrow-left.svg');
+    }
+    &:hover {
+      background-color: $red;
+      &:before {
+        background-image: url('../images/arrow-left-white.svg');
+      }
+    }
+  }
+}
+
+.footer {
+  padding: 150px;
+  background-color: #f8f8f8;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
   }
 }

@@ -42,19 +42,22 @@ body {
   font-size: 16px;
   line-height: 30px;
   color: #4F5665;
-  // min-width: 1920px;
+  min-width: 1920px;
+  overflow-x: hidden;
 }
 
 .container{
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  position: relative;
 }
 
-.container-fluid{
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 30px;
+.slider-container {
+  max-width: 1350px;
+  margin-left: auto;
+  position: absolute;
+  left: 0;
 }
 
 .title {
