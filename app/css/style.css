@@ -988,7 +988,7 @@ body {
   align-items: center;
   border-radius: 50%;
   background-color: #f53737;
-  box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.2);
   margin-right: 20px;
 }
 .footer__info-social {
