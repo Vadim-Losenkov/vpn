@@ -1,5 +1,6 @@
 html{
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -42,8 +43,8 @@ body {
   font-size: 16px;
   line-height: 30px;
   color: #4F5665;
-  // min-width: 1920px;
   overflow-x: hidden;
+  min-width: 320px;
 }
 
 .container{
@@ -78,5 +79,23 @@ body {
     color: #4f5665;
     font-weight: 400;
     text-align: center;
+  }
+}
+
+.over {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(#000, .5);
+  z-index: 9000;
+  opacity: 0;
+  transform: translateX(120%);
+  transition: opacity .3s;
+  &.open {
+    transition: opacity .3s;
+    transform: translateX(0);
+    opacity: 1;
   }
 }
