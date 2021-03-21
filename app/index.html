@@ -27,8 +27,8 @@
           </ul>
         </nav>
         <div class="header__login">
-          <button class="header__login-signin">Войти</button>
-          <button class="header__login-signup">Зарегистрироваться</button>
+          <a href="#login-popup" class="header__login-signin" data-effect="mfp-zoom-in">Войти</a>
+          <a href="#signup-popup" class="header__login-signup" data-effect="mfp-zoom-in">Зарегистрироваться</a>
         </div>
         <div class="header__btn">
           <div class="header__btn-line first"></div>
@@ -45,8 +45,8 @@
           <li class="header__list-item"><a href="#help" class="header__list-link">Помощь</a></li>
         </ul>
         <div class="header__login-mobile">
-          <button class="header__login-signin">Войти</button>
-          <button class="header__login-signup">Зарегистрироваться</button>
+          <a href="#login-popup" class="header__login-signin" data-effect="mfp-zoom-in">Войти</a>
+          <a href="#signup-popup" class="header__login-signup" data-effect="mfp-zoom-in">Зарегистрироваться</a>
         </div>
       </div>
     </div>
@@ -62,7 +62,7 @@
             Предоставьте сеть для всех ваших потребностей с легкостью и весельем, используя Laslesvpn, чтобы узнать
             интересные функции от нас.
           </div>
-            <a href="#top-popup" class="top__content-btn" data-effect="mfp-zoom-in">Начать</a></li>
+            <a href="#top-popup" class="top__content-btn" data-effect="mfp-zoom-in">Начать</a>
         </div>
         <div class="top__image">
           <img src="images/Illustration 1.png" alt="">
@@ -71,7 +71,7 @@
       <div class="top__banner">
         <div class="top__banner-col">
           <div class="top__banner-img">
-            <img src="images/udser.svg" alt="">
+            <img src="images/user.svg" alt="">
           </div>
           <div class="top__banner-content">
             <h3 class="top__banner-title">
@@ -151,7 +151,7 @@
               <img src="../app/images/product.png" alt="">
             </div>
             <div class="product__item-title">
-              Бесплатный план
+               План по акции
             </div>
             <ul class="product__item-list">
               <li class="product__item-plus">Безлимитное использование</li>
@@ -162,11 +162,11 @@
           </div>
           <div class="product__item-footer">
             <div class="product__item-price">
-              Бесплатно
+              $1 <span>/mo</span>
             </div>
-            <button class="product__item-btn">
+            <a href="#buy-popup" class="product__item-btn" data-effect="mfp-zoom-in">
               выбрать
-            </button>
+            </a>
           </div>
         </div>
         <div class="product__item">
@@ -190,9 +190,9 @@
             <div class="product__item-price">
               $9 <span>/ mo</span>
             </div>
-            <button class="product__item-btn">
+            <a href="#buy-popup" class="product__item-btn" data-effect="mfp-zoom-in">
               выбрать
-            </button>
+            </a>
           </div>
         </div>
         <div class="product__item">
@@ -216,9 +216,9 @@
             <div class="product__item-price">
               $12 <span>/ mo</span>
             </div>
-            <button class="product__item-btn">
+            <a href="#buy-popup" class="product__item-btn" data-effect="mfp-zoom-in">
               выбрать
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -574,13 +574,13 @@
             Подпишись сейчас для получения специальных функций!
           </div>
         </div>
-        <button class="reviews__banner-btn">
+        <a class="reviews__banner-btn" data-effect="mfp-zoom-in">
           Подписаться сейчас
-        </button>
+        </a>
         <div class="reviews__banner-btn--mobile">
-          <button class="reviews__banner-btn">
+          <a href="#sub-popup" class="reviews__banner-btn" data-effect="mfp-zoom-in">
             Подписаться сейчас
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -654,15 +654,65 @@
 
   <div class="popups">
     <div id="top-popup" class="white-popup mfp-with-anim mfp-hide">
-      <h2>Zoom popup</h2>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti itaque ipsam illum eaque, odio cumque quam asperiores dolores labore ab.</p>
+      <h2 class="top-popup__title">LaslesVPN</h2>
+      <p class="top-popup__text">
+        Оформить подписку на 1 месяц за $10?
+      </p>
+      <input class="top-popup__input" type="text" placeholder="введите ваш IP: " />
+      <button class="top-popup__button close-btn-i">
+        оформить
+      </button>
+    </div>
+    <div id="login-popup" class="white-popup mfp-with-anim mfp-hide">
+      <h2 class="top-popup__title">LaslesVPN</h2>
+      <p class="top-popup__text">
+        Вход в аккаунт: 
+      </p>
+      <input class="top-popup__input" type="text" placeholder="введите ваш nickname: " />
+      <input class="top-popup__input" type="password" placeholder="введите ваш Пароль: " />
+      <button class="top-popup__button close-btn-i">
+        Войти
+      </button>
+    </div>
+    <div id="signup-popup" class="white-popup mfp-with-anim mfp-hide">
+      <h2 class="top-popup__title">LaslesVPN</h2>
+      <p class="top-popup__text">
+        Регистрация: 
+      </p>
+      <input class="top-popup__input signup" type="text" placeholder="придумайте nickname: " />
+      <input class="top-popup__input" type="password" placeholder="придумайте пароль: " />
+      <input class="top-popup__input" type="password" placeholder="повторите пароль: " />
+      <button class="top-popup__button close-btn-i">
+        Зарегистрироваться
+      </button>
+    </div>
+    <div id="buy-popup" class="white-popup mfp-with-anim mfp-hide">
+      <h2 class="top-popup__title">LaslesVPN</h2>
+      <p class="top-popup__text">
+        Покупка тарифа
+      </p>
+      <input class="top-popup__input signup" type="text" placeholder="комментарий к покупке (опционально): " />
+      <input class="top-popup__input" type="text" value="$10" placeholder="сумма: " />
+      <button class="top-popup__button close-btn-i">
+        Оплатить
+      </button>
+    </div>
+    <div id="sub-popup" class="white-popup mfp-with-anim mfp-hide">
+      <h2 class="top-popup__title">LaslesVPN</h2>
+      <p class="top-popup__text">
+        Подписка на рассылку
+      </p>
+      <input class="top-popup__input" type="text" placeholder="Введите email: " />
+      <button class="top-popup__button close-btn-i">
+        подписаться
+      </button>
     </div>
   </div>
 
 
   <script src="js/jquery.min.js"></script>
   <script src="js/slick.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/jquery.magnific-popup.js"></script>
   <script src="js/main.js"></script>
 </body>
 

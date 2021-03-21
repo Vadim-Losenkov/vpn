@@ -38,7 +38,7 @@
   }
   
   &__login-signup {
-    width: 180px;
+    padding: 0 10px;
     height: 45px;
     display: flex;
     justify-content: center;
@@ -93,7 +93,7 @@
     margin-bottom: 50px;
   }
   &__content-btn {
-    padding: 20px 75px;
+    padding: 10px 75px;
     background-color: $red;
     color: #fff;
     font-weight: 700;
@@ -183,7 +183,7 @@
     justify-content: center;
   }
   &__item {
-    padding: 50px 70px;
+    padding: 40px 70px;
     background-color: #fff;
     border-radius: 10px;
     border: 2px solid  #ccc;
@@ -254,6 +254,7 @@
     font-weight: 700;
     color: $red;
     width: 100%;
+    text-align: center;
   }
 }
 
@@ -354,7 +355,7 @@
       border-radius: 10px;
       color: #fff;
       font-weight: 700;
-      padding: 20px 65px;
+      padding: 10px 65px;
       &--mobile {
         display: none;
       }
@@ -491,8 +492,36 @@
   position: relative;
   background: #FFF;
   padding: 25px;
-  max-width: 400px;
-  margin: 0 auto; 
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 5px;
+  z-index: 2000;
+}
+
+.top-popup {
+  &__text {
+    margin-bottom: 30px;
+  }
+  &__input {
+    outline: none;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid  #ccc;
+    padding: 5px;
+    margin-bottom: 10px;
+    &.signup {
+      margin-bottom: 35px;
+    }
+  }
+  &__button {
+    background-color: $red;
+    padding: 10px 25px;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+  }
 }
 
 @import "media";
