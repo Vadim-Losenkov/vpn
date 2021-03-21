@@ -41,3 +41,7 @@ $(function() {
     $('.header__mobile').removeClass('open')
   })
 })
+
+const popup = new Phopup('.top-popup', {
+  opener: '.top__content-btn',
+})

@@ -12,7 +12,7 @@
   left: 0;
   top: 0;
   background-color: #fff;
-  z-index: 9999;
+  z-index: 1500;
   box-shadow: 2px 2px 5px rgba(#000, .2);
 
   &__inner {
@@ -179,7 +179,7 @@
   background-color: #fafafa;
   &__inner {
     display: flex;
-    flex-wrap: wrap;
+    align-content: flex-start;
     justify-content: center;
   }
   &__item {
@@ -193,9 +193,6 @@
     transition: all .3s;
     margin: 0 15px;
     margin-bottom: 30px;
-    &:last-child {
-      margin-bottom: 0;
-    }
     &:hover {
       border: 2px solid $red;
       .product__item-btn {
@@ -307,6 +304,9 @@
   &__item-rate {
     font-weight: 500;
     display: flex;
+    img {
+      margin-left: 10px;
+    }
   }
   &__user {
     display: flex; 
@@ -433,7 +433,6 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
   }
 
   &__info {
@@ -480,11 +479,10 @@
     margin-bottom: 10px;
   }
   &__box {
-    max-width: 570px;
+    max-width: 720px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
   }
 }
 

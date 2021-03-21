@@ -22,8 +22,8 @@
     background-color: #fff;
     position: fixed;
     bottom: 0; 
-    top: 87px;
-    z-index: 9990;
+    top: 98px;
+    z-index: 1510;
     right: -500px;
     margin-left: auto;
     padding: 0 20px;
@@ -107,6 +107,15 @@
     &-col + &-col {
       padding-left: 50px!important;
     }
+  }
+  .product__inner {
+    flex-wrap: wrap;
+  }
+  .footer__inner {
+    flex-wrap: wrap;
+  }
+  .footer__box {
+    flex-wrap: wrap;
   }
 }
 
