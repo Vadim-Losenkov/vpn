@@ -11,13 +11,15 @@
   border-radius: 5px;
   z-index: 9999;
   opacity: 0;
+  -webkit-transition: all .3s;
   transition: all .3s;
   position: absolute;
 }
 
-.phopup-main.open .phopup-inner{
+.phopup-main.open .phopup-inner {
   opacity: 1;
   margin-top: 50%;
+  -webkit-transition: all .3s;
   transition: all .3s;
   min-width: 280px;
   left: 0;
@@ -26,20 +28,25 @@
 }
 
 .phopup-over {
-  transform: translateY(-120%);
+  -webkit-transform: translateY(-120%);
+          transform: translateY(-120%);
   opacity: 0;
+  -webkit-transition: opacity .3s;
   transition: opacity .3s;
 }
 
 .phopup-over.open {
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   right: 0;
   top: 0;
   left: 0;
   bottom: 0;
   z-index: 9998;
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   opacity: 1;
+  -webkit-transition: opacity .3s;
   transition: opacity .3s;
 }
+/*# sourceMappingURL=Phopup.css.map */

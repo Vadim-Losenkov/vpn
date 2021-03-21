@@ -11,6 +11,7 @@
   "author": "Vadim Losenkov",
   "license": "ISC",
   "dependencies": {
+    "magnific-popup": "^1.1.0",
     "swiper": "^6.5.0"
   }
 }

@@ -4,23 +4,19 @@ class Phopup {
     this.options = options
     
     this.init()
-    this.$over = document.querySelector('.phopup-over')
   }
   
   opener() {
     const btn = document.querySelector(this.options.opener || '.phopup-open')
     
-    this.$over.addEventListener('click', () => this.open())
+    this.$over.addEventListener('click', () => {
+      this.open()
+      document.body.style.position = 'static'
+    })
     if (btn) {
       btn.addEventListener('click', () => {
         this.open()
-        (function pointerEvents() {
-          const $wrapper = document.querySelector('.wrapper')
-          
-          this.$over.classList.contains('open')
-            ? $wrapper.style.pointerEvents = 'none' 
-            : $wrapper.style.pointerEvents = 'auto' 
-        }())
+        document.body.style.position = 'fixed'
       })
     }
   }
@@ -32,6 +28,7 @@ class Phopup {
   
   init() {
     document.body.insertAdjacentHTML('beforeend', '<div class="phopup-over"></div>')
+    this.$over = document.querySelector('.phopup-over')
     this.opener()
   }
 }

@@ -486,4 +486,13 @@
   }
 }
 
+// popups
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 25px;
+  max-width: 400px;
+  margin: 0 auto; 
+}
+
 @import "media";
